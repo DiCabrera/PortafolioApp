@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HelperService } from 'src/app/services/helper.service';
 
 @Component({
   selector: 'app-login',
@@ -12,9 +13,19 @@ export class LoginPage implements OnInit {
   passShow: boolean = false;
   passType:string = "password"
 
-  constructor() { }
+  constructor(
+    private helperService:HelperService
+  ) { }
 
   ngOnInit() {
+  }
+
+  async login(){
+    const loader = await this.helperService.showLoader("Cargando")
+    if (this.email == ""){
+      await loader.dismiss();
+      this.helperService.showAlert("Por favor ingrese un correo","Ha ocurrido un error")
+    }
   }
 
   verPass(){
