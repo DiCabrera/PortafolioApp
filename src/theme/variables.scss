@@ -1,6 +1,10 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
 
+
+ion-content{
+	--ion-background-color:#eef7eb;
+}
 //ROJO
 :root {
 	--ion-color-rojo: #fd1b63;
