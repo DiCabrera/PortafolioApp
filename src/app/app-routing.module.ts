@@ -39,7 +39,11 @@ const routes: Routes = [
   {
     path: 'recuperar-pass',
     loadChildren: () => import('./pages/recuperar-pass/recuperar-pass.module').then( m => m.RecuperarPassPageModule)
+  },  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
+
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 <ion-header [translucent]="true" id="header">
-  <ion-title id="textTitle">LOGIN</ion-title>
+  <ion-title id="textTitle">Registro</ion-title>
   <div>
     <ion-card id="profileCard">
       <ion-card-header>[Nombre app]</ion-card-header>
@@ -13,32 +13,35 @@
   <ion-row class="ion-justify-content-center" >
     <ion-card id="container">
       <ion-card-header>
-        <ion-card-title>Login</ion-card-title>
+        <ion-card-title>Registro</ion-card-title>
         <ion-card-subtitle>¡Bienvenido/a!</ion-card-subtitle>
         <br>
       </ion-card-header>
 
       <ion-card-content>
-        <form [formGroup]="loginForm">
+        <form [formGroup]="registerForm">
           <ion-input formControlName="username" label="Usuario" label-placement="floating" fill="outline"
           placeholder="Ingrese usuario"></ion-input>
           <br />
+          <ion-input formControlName="email" label="Email" label-placement="floating" fill="outline"
+            placeholder="Ingrese email" ></ion-input>
+          <br>
           <ion-input formControlName="password" label="Contraseña" label-placement="floating" fill="outline"
             placeholder="Ingrese contraseña" [type]="passType"></ion-input>
           <br>
+          <ion-input formControlName="password2" label="Confirmar contraseña" label-placement="floating" fill="outline"
+            placeholder="Confirmar contraseña" [type]="passType"></ion-input>
+          <br>
           <ion-checkbox (ionChange)="verPass()" labelPlacement="end">Mostrar contraseña</ion-checkbox>
           <hr>
-          <a [routerLink]="['/recuperar-pass']">He olvidado mi contraseña</a>
+          <a [routerLink]="['/login']">Ya tienes una cuenta? Iniciar sesión </a>
         </form>
       </ion-card-content>
     </ion-card>
   </ion-row>
   <ion-row class="ion-justify-content-center">
 
-    <ion-button (click)="login()" color="rojo">
-      Ingresar
-    </ion-button>
-    <ion-button [routerLink]="['/register']" fill="outline" color="rojo">
+    <ion-button (click)="register()" fill="outline" color="rojo">
       Registrarse
     </ion-button>
   </ion-row>
