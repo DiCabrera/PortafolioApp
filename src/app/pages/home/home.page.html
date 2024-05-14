@@ -15,7 +15,9 @@
       Perfil niños/as
       <ion-tab-button>
         <div id="area">
-          <ion-icon name="happy" id="iconMenu"></ion-icon>
+          <a [routerLink]="['/infante']">
+            <ion-icon name="happy" id="iconMenu"></ion-icon>
+          </a>
         </div>
       </ion-tab-button>
     </div>
@@ -55,7 +57,9 @@
 
   <div id="fBloque">
     <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
-      <ion-icon name="home"></ion-icon>
+      <a [routerLink]="['/home']">
+        <ion-icon name="home"></ion-icon>
+      </a>
     </ion-button>
   </div>
 
@@ -67,7 +71,9 @@
 
   <div id="fBloque">
     <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
-      <ion-icon name="person"></ion-icon>
+      <a [routerLink]="['/perfil']">
+        <ion-icon name="person"></ion-icon>
+      </a>
     </ion-button>
   </div>
 

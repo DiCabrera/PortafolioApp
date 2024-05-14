@@ -24,7 +24,9 @@
 
   <div id="fBloque">
     <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
-      <ion-icon name="home"></ion-icon>
+      <a [routerLink]="['/home']">
+        <ion-icon name="home"></ion-icon>
+      </a>
     </ion-button>
   </div>
 
@@ -36,7 +38,9 @@
 
   <div id="fBloque">
     <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
-      <ion-icon name="person"></ion-icon>
+      <a [routerLink]="['/perfil']">
+        <ion-icon name="person"></ion-icon>
+      </a>
     </ion-button>
   </div>
 
