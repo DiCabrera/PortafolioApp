@@ -1,0 +1,44 @@
+<ion-header [translucent]="true" id="header">
+  <ion-title id="textTitle">PERFIL</ion-title>
+  <div>
+    <ion-card id="profileCard">
+      <ion-card-header>Bienvenido/a</ion-card-header>
+      <ion-card-content id="textCard">Jane Doe</ion-card-content>
+      <hr class="rounded">
+      <ion-input label="Nombre" labelPlacement="floating" value="Jane Doe" fill="outline" id="input"></ion-input>
+      <ion-input label="Edad" labelPlacement="floating" value="34" fill="outline" id="input"></ion-input>
+      <ion-input label="Email" labelPlacement="floating" value="ja.doe@gmail.com" fill="outline" id="input"></ion-input>
+      <ion-input label="Celular" labelPlacement="floating" value="912345678" fill="outline" id="input"></ion-input>  
+      <ion-button color="rojo" id="btn">
+        Guardar datos
+      </ion-button>
+    </ion-card>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+</ion-content>
+
+<footer id="fContainer">
+
+  <div id="fBloque">
+    <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="home"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id="fBloque">
+    <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="bookmarks"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id="fBloque">
+    <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="person"></ion-icon>
+    </ion-button>
+  </div>
+
+</footer>
+

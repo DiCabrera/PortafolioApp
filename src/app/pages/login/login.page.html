@@ -1,0 +1,46 @@
+<ion-header [translucent]="true" id="header">
+  <ion-title id="textTitle">LOGIN</ion-title>
+  <div>
+    <ion-card id="profileCard">
+      <ion-card-header>[Nombre app]</ion-card-header>
+      <ion-card-content id="textCard">Bienvenido/a</ion-card-content>
+    </ion-card>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-row class="ion-justify-content-center" >
+    <ion-card id="container">
+      <ion-card-header>
+        <ion-card-title>Login</ion-card-title>
+        <ion-card-subtitle>¡Bienvenido/a!</ion-card-subtitle>
+        <br>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form [formGroup]="loginForm">
+          <ion-input formControlName="username" label="Usuario" label-placement="floating" fill="outline"
+          placeholder="Ingrese usuario"></ion-input>
+          <br />
+          <ion-input formControlName="password" label="Contraseña" label-placement="floating" fill="outline"
+            placeholder="Ingrese contraseña" [type]="passType"></ion-input>
+          <br>
+          <ion-checkbox (ionChange)="verPass()" labelPlacement="end">Mostrar contraseña</ion-checkbox>
+          <hr>
+          <a [routerLink]="['/recuperar-pass']">He olvidado mi contraseña</a>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+
+    <ion-button (click)="login()" color="rojo">
+      Ingresar
+    </ion-button>
+    <ion-button [routerLink]="['/register']" fill="outline" color="rojo">
+      Registrarse
+    </ion-button>
+  </ion-row>
+
+</ion-content>

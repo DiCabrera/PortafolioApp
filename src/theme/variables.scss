@@ -1,0 +1,63 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+
+
+ion-content{
+	--ion-background-color:#eef7eb;
+}
+//ROJO
+:root {
+	--ion-color-rojo: #fd1b63;
+	--ion-color-rojo-rgb: 253,27,99;
+	--ion-color-rojo-contrast: #000000;
+	--ion-color-rojo-contrast-rgb: 0,0,0;
+	--ion-color-rojo-shade: #df1857;
+	--ion-color-rojo-tint: #fd3273;
+}
+
+.ion-color-rojo {
+	--ion-color-base: var(--ion-color-rojo);
+	--ion-color-base-rgb: var(--ion-color-rojo-rgb);
+	--ion-color-contrast: var(--ion-color-rojo-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-rojo-contrast-rgb);
+	--ion-color-shade: var(--ion-color-rojo-shade);
+	--ion-color-tint: var(--ion-color-rojo-tint);
+}
+
+//TURQUESA
+:root {
+	--ion-color-turquesa: #49ffc7;
+	--ion-color-turquesa-rgb: 73,255,199;
+	--ion-color-turquesa-contrast: #000000;
+	--ion-color-turquesa-contrast-rgb: 0,0,0;
+	--ion-color-turquesa-shade: #40e0af;
+	--ion-color-turquesa-tint: #5bffcd;
+}
+
+.ion-color-turquesa {
+	--ion-color-base: var(--ion-color-turquesa);
+	--ion-color-base-rgb: var(--ion-color-turquesa-rgb);
+	--ion-color-contrast: var(--ion-color-turquesa-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-turquesa-contrast-rgb);
+	--ion-color-shade: var(--ion-color-turquesa-shade);
+	--ion-color-tint: var(--ion-color-turquesa-tint);
+}
+
+//BLANCO FONDO
+:root {
+	--ion-color-blanco: #e8f0f0;
+	--ion-color-blanco-rgb: 232,240,240;
+	--ion-color-blanco-contrast: #000000;
+	--ion-color-blanco-contrast-rgb: 0,0,0;
+	--ion-color-blanco-shade: #ccd3d3;
+	--ion-color-blanco-tint: #eaf2f2;
+}
+
+.ion-color-blanco {
+	--ion-color-base: var(--ion-color-blanco);
+	--ion-color-base-rgb: var(--ion-color-blanco-rgb);
+	--ion-color-contrast: var(--ion-color-blanco-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-blanco-contrast-rgb);
+	--ion-color-shade: var(--ion-color-blanco-shade);
+	--ion-color-tint: var(--ion-color-blanco-tint);
+}
