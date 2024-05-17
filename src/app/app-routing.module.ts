@@ -43,6 +43,14 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
+  {
+    path: 'elegir-propiedad',
+    loadChildren: () => import('./pages/elegir-propiedad/elegir-propiedad.module').then( m => m.ElegirPropiedadPageModule)
+  },
+  {
+    path: 'registrar-propiedad',
+    loadChildren: () => import('./pages/registrar-propiedad/registrar-propiedad.module').then( m => m.RegistrarPropiedadPageModule)
+  },
 
 ];
 

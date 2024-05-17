@@ -1,0 +1,90 @@
+<ion-header [translucent]="true" id="header">
+  <ion-title id="textTitle">HOME</ion-title>
+  <div>
+    <ion-card id="profileCard">
+      <ion-card-header>Bienvenido/a</ion-card-header>
+      <ion-card-content id="textCard">asd</ion-card-content>
+    </ion-card>
+  </div>
+</ion-header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- <ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+</ion-content> -->
+
+<ion-content>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-select label="Seleccionar Propiedad">
+        <ion-select-option value="apple">Apple</ion-select-option>
+        <ion-select-option value="banana">Banana</ion-select-option>
+        <ion-select-option value="orange">Orange</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <div id="container">
+
+    <div id="bloque">
+      Agregar nueva propiedad
+      <ion-tab-button  [routerLink]="['/registrar-propiedad']">
+        <div id="area">
+          <ion-icon name="happy" id="iconMenu"></ion-icon>
+        </div>
+      </ion-tab-button>
+    </div>
+  </div>
+
+</ion-content>
+
+
+
+<footer id="fContainer">
+
+  <div id="fBloque">
+    <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="home"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id="fBloque">
+    <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="bookmarks"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id="fBloque">
+    <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="person"></ion-icon>
+    </ion-button>
+  </div>
+
+</footer>

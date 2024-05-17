@@ -48,7 +48,7 @@ export class LoginPage implements OnInit {
           
           localStorage.setItem('token', data.access);
           console.log(data.access);
-          this.router.navigate(['/home']);
+          this.router.navigate(['/elegir-propiedad']);
           // this.mostrarSnackbar('Bienvenido');
           // this.ngxService.stop();
          },

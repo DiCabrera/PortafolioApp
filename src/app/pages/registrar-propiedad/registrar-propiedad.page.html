@@ -1,0 +1,44 @@
+<ion-header [translucent]="true" id="header">
+  <ion-title id="textTitle">Registro</ion-title>
+  <div>
+    <ion-card id="profileCard">
+      <ion-card-header>[Nombre app]</ion-card-header>
+      <ion-card-content id="textCard">Bienvenido/a</ion-card-content>
+    </ion-card>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-row class="ion-justify-content-center" >
+    <ion-card id="container">
+      <ion-card-header>
+        <ion-card-title>Registro</ion-card-title>
+        <ion-card-subtitle>¡Bienvenido/a!</ion-card-subtitle>
+        <br>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form [formGroup]="formPropiedad">
+          <ion-input formControlName="owner" label="Nombre propietario" label-placement="floating" fill="outline"
+          placeholder="Ingrese nombre"></ion-input>
+          <br />
+          <ion-input formControlName="address" label="Direccion" label-placement="floating" fill="outline"
+            placeholder="Ingrese dirección" ></ion-input>
+          <br>
+          <ion-input formControlName="contactNumber" label="Numero" label-placement="floating" fill="outline"
+            placeholder="Ingrese numero de contacto"></ion-input>
+          <br>
+          <hr>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+
+    <ion-button (click)="register()" fill="outline" color="rojo">
+      Registrarse
+    </ion-button>
+  </ion-row>
+
+</ion-content>
