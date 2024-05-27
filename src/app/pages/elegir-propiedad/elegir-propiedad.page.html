@@ -7,55 +7,37 @@
     </ion-card>
   </div>
 </ion-header>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-<!-- <ion-content>
-  <ion-list>
+
+<!--
+<ion-content>
+  <ion-list id="bloque">
     <ion-item *ngFor="let item of items">
       {{ item }}
     </ion-item>
   </ion-list>
-</ion-content> -->
+</ion-content>
+-->
 
 <ion-content>
 
-
-  <ion-list>
-    <ion-item>
-      <ion-select label="Seleccionar Propiedad">
-        <ion-select-option value="apple">Apple</ion-select-option>
-        <ion-select-option value="banana">Banana</ion-select-option>
-        <ion-select-option value="orange">Orange</ion-select-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-
   <div id="container">
+
+    <div >
+      <ion-list id="bloque">
+        <ion-item>
+          <ion-select label="Seleccionar Propiedad">
+            <ion-select-option value="apple">Apple</ion-select-option>
+            <ion-select-option value="banana">Banana</ion-select-option>
+            <ion-select-option value="orange">Orange</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </div>
 
     <div id="bloque">
       Agregar nueva propiedad
-      <ion-tab-button  [routerLink]="['/registrar-propiedad']">
+      <ion-tab-button [routerLink]="['/registrar-propiedad']">
         <div id="area">
           <ion-icon name="happy" id="iconMenu"></ion-icon>
         </div>
