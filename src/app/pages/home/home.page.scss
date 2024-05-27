@@ -94,3 +94,20 @@
 #fBloque{
     margin: 0px;
 }
+
+#emergenciaBtn{
+    position: absolute;
+    z-index: 2;
+    //margin-bottom: 40px;
+    bottom: 0;
+    right: 0;
+    margin-right: 8px;
+    height: 145px;
+    font-weight: bold;
+}
+
+#sos{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
