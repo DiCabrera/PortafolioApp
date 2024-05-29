@@ -11,7 +11,7 @@
 <ion-content>
   <div id="container">
 
-    <div id="bloque">
+    <div id="bloque" [routerLink]="['/infante']">
       Perfil niños/as
       <ion-tab-button>
         <div id="area">
@@ -29,7 +29,7 @@
       </ion-tab-button>
     </div>
 
-    <div id="bloque">
+    <div id="bloque" [routerLink]="['/tutorial']">
       Procedimientos de emergencia
       <ion-tab-button>
         <div id="area">
@@ -38,7 +38,7 @@
       </ion-tab-button>
     </div>
 
-    <div id="bloque" >
+    <div id="bloque">
       Mapa
       <ion-tab-button>
         <div id="area">
@@ -49,9 +49,39 @@
   </div>
 </ion-content>
 
+<!--  MODAL DEL SOS   -->
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    
+    <ion-button slot="end" size="large" color="danger" (click)="setOpen(false)">
+      Cerrar
+      <ion-icon name="close-circle" slot="end"></ion-icon>
+    </ion-button>
 
+    <ion-content>
+      
+      <div id="mContainer">
+    
+        <ion-button id="mBloque" shape="round" color="danger" fill="outline">
+          SAMU  131
+        </ion-button>
+    
+        <ion-button id="mBloque" shape="round" color="danger" fill="outline">
+          Bomberos  132
+        </ion-button>
 
+        <ion-button id="mBloque" shape="round" color="danger" fill="outline">
+          Carabineros  133
+        </ion-button>
+        
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-modal>
 
+<!--  FIN DEL MODAL SOS  -->
+
+<!--  FOOTER  -->
 
 <footer id="fContainer">
 
@@ -68,13 +98,13 @@
   </div>
 
   <div id="fBloque">
-    <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+    <ion-button [routerLink]="['/perfil']" shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
       <ion-icon name="person"></ion-icon>
     </ion-button>
   </div>
 
   <div id="emergenciaBtn">
-    <ion-button id="sos" shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="danger">
+    <ion-button (click)="setOpen(true)" id="sos" shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="danger">
       SOS
       <ion-icon name="radio"></ion-icon>
     </ion-button>

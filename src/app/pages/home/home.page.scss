@@ -98,11 +98,10 @@
 #emergenciaBtn{
     position: absolute;
     z-index: 2;
-    //margin-bottom: 40px;
+    margin-bottom: 90px;
     bottom: 0;
     right: 0;
     margin-right: 8px;
-    height: 145px;
     font-weight: bold;
 }
 
@@ -110,4 +109,25 @@
     font-family:Arial, Helvetica, sans-serif;
     font-weight: bold;
 
+}
+
+//////// MODAL /////////
+
+#mContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 30px;
+}
+
+#mBloque{
+    text-align: center;
+    color: rgb(73, 73, 73);
+    border-radius: 5px;
+    font-size: 35px;
+    font-weight: bold;
+    height: 150px;
 }
