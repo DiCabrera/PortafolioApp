@@ -39,7 +39,8 @@ const routes: Routes = [
   {
     path: 'recuperar-pass',
     loadChildren: () => import('./pages/recuperar-pass/recuperar-pass.module').then( m => m.RecuperarPassPageModule)
-  },  {
+  },
+  {
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
@@ -51,6 +52,18 @@ const routes: Routes = [
     path: 'registrar-propiedad',
     loadChildren: () => import('./pages/registrar-propiedad/registrar-propiedad.module').then( m => m.RegistrarPropiedadPageModule)
   },
+  {
+    path: 'bomberos',
+    loadChildren: () => import('./pages/bomberos/bomberos.module').then( m => m.BomberosPageModule)
+  },
+  {
+    path: 'salud',
+    loadChildren: () => import('./pages/salud/salud.module').then( m => m.SaludPageModule)
+  },  {
+    path: 'sismo',
+    loadChildren: () => import('./pages/sismo/sismo.module').then( m => m.SismoPageModule)
+  },
+
 
 ];
 

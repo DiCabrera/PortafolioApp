@@ -3,47 +3,23 @@
   <div>
     <ion-card id="profileCard">
       <ion-card-header>[nombre app]</ion-card-header>
-      <ion-card-content id="textCard">Emergencias</ion-card-content>
+      <ion-card-content id="textCard">Sismo</ion-card-content>
     </ion-card>
   </div>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
   <div id="container">
+    <div id="title">Preparativos importantes ante un sismo</div>
 
-    <div id="bloque">
-      Incendios
-      <ion-tab-button [routerLink]="['/bomberos']">
-        <div id="area">
-          <ion-icon name="flame" id="iconMenu"></ion-icon>
-          <img src="assets/img/bgIncendio.jpg" id="img">
-        </div>
-      </ion-tab-button>
-    </div>
-
-    <div id="bloque">
-      Salud
-      <ion-tab-button>
-        <div id="area">
-          <ion-icon name="bandage" id="iconMenu"></ion-icon>
-          <img src="assets/img/bgSalud.webp" id="img">
-        </div>
-      </ion-tab-button>
-    </div>
-
-    <div id="bloque">
-      Sismos
-      <ion-tab-button [routerLink]="['/sismo']">
-        <div id="area">
-          <ion-icon name="business" id="iconMenu"></ion-icon>
-          <img src="assets/img/bgSismo.webp" id="img">
-        </div>
-      </ion-tab-button>
-    </div>
-
+    <div id="text">• Despeja posibles vías de escape.</div>
+    <div id="text">• Mantén un caldazo cerca para protegerte de cortes en los pies.</div>
+    <div id="text">• Guarda los objetos frágiles, como vasos o vajillas, en lugares cerrados para evitar que caigan y obstaculicen una posible vía de escape.</div>
+    <div id="text">• Establece un lugar cercano para guardar linternas o lámparas</div>
+    <hr>
   </div>
-
 </ion-content>
+
 
 <footer id="fContainer">
 
