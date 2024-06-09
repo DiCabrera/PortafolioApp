@@ -1,13 +1,53 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>salud</ion-title>
-  </ion-toolbar>
+<ion-header [translucent]="true" id="header">
+  <ion-title id="textTitle">Informaciones</ion-title>
+  <div>
+    <ion-card id="profileCard">
+      <ion-card-header>[nombre app]</ion-card-header>
+      <ion-card-content id="textCard">Salud</ion-card-content>
+    </ion-card>
+  </div>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">salud</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div id="container">
+    <div id="title">Fracturas</div>
+
+    <div id="text">• No mover la zona afectada y no intente acmododar el hueso.</div>
+    <div id="text">• En caso de demorar en llegar al hospital, puede ayudarse de una tablilla para inmovilizar el hueso.</div>
+    <div id="text">• Ponga una tela entre la tablilla y la piel, luego envuelva la zona completamente.</div>
+    <hr>
+    <div id="title">Quemaduras</div>
+
+    <div id="text">• Alivie el dolor con agua fría.</div>
+    <div id="text">• Use una gasa humeda para cubrir la zona afectada. El agua evitará que se pegue a la piel.</div>
+    <div id="text">• Si hay restos de ropa pegada en las heridas, no intente retirarlas.</div>
+    <hr>
+    <div id="title">Fracturas</div>
+
+    <div id="text">• No mover la zona afectada y no intente acmododar el hueso.</div>
+
+  </div>
 </ion-content>
+
+
+<footer id="fContainer">
+
+  <div id="fBloque">
+    <ion-button [routerLink]="['/home']" shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="home"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id="fBloque">
+    <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="bookmarks"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id="fBloque">
+    <ion-button [routerLink]="['/perfil']" shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="person"></ion-icon>
+    </ion-button>
+  </div>
+
+</footer>

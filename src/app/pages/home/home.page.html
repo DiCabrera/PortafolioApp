@@ -3,7 +3,7 @@
   <div>
     <ion-card id="profileCard">
       <ion-card-header>Bienvenido/a</ion-card-header>
-      <ion-card-content id="textCard">Jane Doe</ion-card-content>
+      <ion-card-content id="textCard">Jane Doe </ion-card-content>
     </ion-card>
   </div>
 </ion-header>
@@ -62,7 +62,7 @@
       
       <div id="mContainer">
     
-        <ion-button id="mBloque" shape="round" color="danger" fill="outline">
+        <ion-button href="tel:+56920060178" id="mBloque" shape="round" color="danger" fill="outline">
           SAMU  131
         </ion-button>
     
@@ -73,8 +73,12 @@
         <ion-button id="mBloque" shape="round" color="danger" fill="outline">
           Carabineros  133
         </ion-button>
-        
+        <ion-button (click)="location()" id="area" shape="round" color="danger" fill="outline">
+          Compartir ubicación 
+          <ion-icon name="share-social"></ion-icon>
+        </ion-button>
       </div>
+      
     </ion-content>
   </ng-template>
 </ion-modal>
