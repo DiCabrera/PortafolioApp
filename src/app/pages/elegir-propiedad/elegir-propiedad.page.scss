@@ -79,6 +79,14 @@
     font-size: 70px;
 }
 
+#backBtn{
+    --icon-margin-top: 40px;
+    --color: rgb(83, 83, 83);
+    position: absolute;
+    z-index: 3;
+    --icon-font-size: 45px;
+}
+
 /////////// FOOTER ///////////
 
 #fContainer{
