@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class RegistrarPropiedadPage implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private dataService: DataService
+    private dataService: DataService,
+    private router: Router
   ) { 
 
 
@@ -43,6 +45,8 @@ export class RegistrarPropiedadPage implements OnInit {
             console.log(formData)
           }
         )
+        this.router.navigate(['/elegir-propiedad']);
+
     }
 
     

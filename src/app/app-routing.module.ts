@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/llamada/llamada.module').then( m => m.LlamadaPageModule)
   },
   {
-    path: 'infante',
+    path: 'infante/:infanteId',
     loadChildren: () => import('./pages/infante/infante.module').then( m => m.InfantePageModule)
   },
   {
@@ -32,7 +32,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/ubicacion/ubicacion.module').then( m => m.UbicacionPageModule)
   },
   {
-    path: 'home',
+    path: 'home/:propiedadId',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
     
   },
@@ -59,10 +59,20 @@ const routes: Routes = [
   {
     path: 'salud',
     loadChildren: () => import('./pages/salud/salud.module').then( m => m.SaludPageModule)
-  },  {
+  },
+  {
     path: 'sismo',
     loadChildren: () => import('./pages/sismo/sismo.module').then( m => m.SismoPageModule)
   },
+  {
+    path: 'ver-infantes/:propiedadId',
+    loadChildren: () => import('./pages/ver-infantes/ver-infantes.module').then( m => m.VerInfantesPageModule)
+  },
+  {
+    path: 'registrar-infante/:propiedadId',
+    loadChildren: () => import('./pages/registrar-infante/registrar-infante.module').then( m => m.RegistrarInfantePageModule)
+  },
+
 
 
 ];

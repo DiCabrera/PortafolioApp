@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-elegir-propiedad',
@@ -7,11 +9,47 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ElegirPropiedadPage implements OnInit {
 
-  items: string[] = ['Item 1', 'Item 2', 'Item 3', 'Item 4']; 
 
-  constructor() { }
+  propiedadId: number = 0;
+  username: string = '';
+
+  propiedades: any[] = [];
+
+  constructor(
+    private dataService: DataService,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
+    this.datosUser()
+    this.listarPropiedades();
+  }
+
+
+
+  datosUser() {
+    this.dataService.datosUsuario().subscribe(
+      (data) => {
+        console.log(data);
+        this.username = data;
+      }
+    )
+  }
+
+
+
+  elegirPropiedad() {
+    this.router.navigate(['/home', this.propiedadId]);
+  }
+
+
+  listarPropiedades() {
+    this.dataService.listarPropiedades().subscribe(
+      (data) => {
+        console.log('Propiedades:', data); // Para verificar los datos recibidos
+        this.propiedades =data;
+      }
+    );
   }
 
 }

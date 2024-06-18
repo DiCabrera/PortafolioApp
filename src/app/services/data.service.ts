@@ -19,15 +19,66 @@ export class DataService {
   ) { }
 
 
+
+
+  detalle_infante(infanteId: number): Observable<any> {
+    const token = this.getToken();
+
+    const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
+    return this.http.get(`${this.baseUrl}/main/detalle-infante/${infanteId}/`, {headers})
+
+  }
+  listar_infantes(propiedadId: number): Observable<any> {
+    const token = this.getToken();
+
+    const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
+    return this.http.get(`${this.baseUrl}/main/listar-infantes/${propiedadId}/`, {headers})
+
+  }
+
+
+  datosUsuario(): Observable<any> {
+    const token = this.getToken();
+
+    const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
+    return this.http.get(`${this.baseUrl}/main/datos-user/`, {headers})
+
+  }
+
+
+
+  listarPropiedades(): Observable<any> {
+    const token = this.getToken();
+
+    const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
+    
+    return this.http.get(`${this.baseUrl}/main/listar-propiedades/`, {headers})
+    
+
+  }
+
+
   registrarPropiedad(data: any): Observable<any> {
    
     const token = this.getToken();
 
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
 
-    return this.http  .post(`${this.baseUrl}/main/registrar-propiedad/`, data, {headers})
+    return this.http.post(`${this.baseUrl}/main/registrar-propiedad/`, data, {headers})
 
   }
+
+  registrarInfante(propiedadId: number, data: any): Observable<any> {
+   
+    const token = this.getToken();
+
+    const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
+
+    return this.http.post(`${this.baseUrl}/main/registrar-infante/${propiedadId}/`, data, {headers})
+
+  }
+
+  
 
 
 

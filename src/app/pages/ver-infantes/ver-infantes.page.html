@@ -1,0 +1,52 @@
+<ion-buttons>
+  <ion-back-button id="backBtn"></ion-back-button>
+</ion-buttons>
+<ion-header [translucent]="true" id="header">
+  <ion-title id="textTitle">PERFIL NIÑO/A</ion-title>
+  <!-- <div>
+    <ion-card id="profileCard">
+      <ion-card-header>Bienvenido/a</ion-card-header>
+      <ion-card-content id="textCard">Jane Doe</ion-card-content>
+    </ion-card>
+  </div> -->
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card id="cardInfante" *ngFor="let infante of infantes">
+    <h2><strong>Nombre: </strong>{{infante.child_name}} </h2>
+    <ion-button [routerLink]="['/infante',infante.id]" >
+      <ion-icon slot="start" name="eye"></ion-icon>
+      Detalles
+    </ion-button>
+  </ion-card>
+  <ion-card id="inputCard">
+    <ion-button color="rojo" id="btn" [routerLink]="['/registrar-infante', propiedadId]">
+      Registrar infante
+    </ion-button>
+    <ion-button [routerLink]="['/home',propiedadId]" color="rojo" id="btn">
+      Volver
+    </ion-button>
+    </ion-card>
+</ion-content>
+
+<footer id="fContainer">
+  <div id="fBloque">
+    <ion-button [routerLink]="['/home']" shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="home"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id="fBloque">
+    <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="bookmarks"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id="fBloque">
+    <ion-button [routerLink]="['/perfil']" shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="person"></ion-icon>
+    </ion-button>
+  </div>
+
+</footer>
+

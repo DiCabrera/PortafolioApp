@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Geolocation } from '@capacitor/geolocation';
 import { Share, ShareOptions } from '@capacitor/share';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +11,32 @@ import { Share, ShareOptions } from '@capacitor/share';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  propiedadId: any;
+  username: string = '';
+
+  constructor(
+    private dataService: DataService,
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit() {
+    this.datosUser()
+    this.propiedadId = this.route.snapshot.paramMap.get('propiedadId');
+   
+    console.log(this.propiedadId); 
     
   }
+
+
+  datosUser() {
+    this.dataService.datosUsuario().subscribe(
+      (data) => {
+        console.log(data);
+        this.username = data;
+      }
+    )
+  }
+
 
   isModalOpen = false;
 

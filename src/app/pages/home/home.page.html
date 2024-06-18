@@ -3,7 +3,7 @@
   <div>
     <ion-card id="profileCard">
       <ion-card-header>Bienvenido/a</ion-card-header>
-      <ion-card-content id="textCard">Jane Doe </ion-card-content>
+      <ion-card-content id="textCard">{{username}}</ion-card-content>
     </ion-card>
   </div>
 </ion-header>
@@ -11,7 +11,7 @@
 <ion-content>
   <div id="container">
 
-    <div id="bloque" [routerLink]="['/infante']">
+    <div id="bloque" [routerLink]="['/ver-infantes', propiedadId]">
       Perfil niños/as
       <ion-tab-button>
         <div id="area">

@@ -1,0 +1,52 @@
+<ion-header [translucent]="true" id="header">
+  <ion-title id="textTitle">PERFIL NIÑO/A</ion-title>
+  <div>
+    <ion-card id="profileCard">
+      <ion-card-header>Bienvenido/a</ion-card-header>
+      <ion-card-content id="textCard">Jane Doe</ion-card-content>
+    </ion-card>
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card id="inputCard">
+    <form [formGroup]="formInfante">
+      <ion-input formControlName="childName" label="Nombre niño/a" labelPlacement="floating" fill="outline" id="input"></ion-input>
+      <ion-input formControlName="age" label="Edad" labelPlacement="floating" fill="outline" id="input"></ion-input>
+      <ion-input formControlName="rut" label="RUT" labelPlacement="floating" fill="outline" id="input"></ion-input>
+      <ion-input formControlName="diagnostic" label="Diagnostico" labelPlacement="floating" fill="outline" id="input"></ion-input>
+      <ion-input formControlName="bloodType" label="Tipo de sangre" labelPlacement="floating" fill="outline" id="input"></ion-input>  
+      <ion-input formControlName="prevision" label="Previsión" labelPlacement="floating" fill="outline" id="input"></ion-input>  
+      <ion-input formControlName="alergias" label="Alergias" labelPlacement="floating" fill="outline" id="input"></ion-input>  
+      <ion-input formControlName="antecendetesMedicos" label="Otros antecedentes médicos" labelPlacement="floating" fill="outline" id="input"></ion-input>  
+    </form>
+    <ion-button (click)="register()" color="rojo" id="btn">
+      Guardar datos
+    </ion-button>
+    <ion-button [routerLink]="['/ver-infantes',propiedadId]" color="rojo" id="btn">
+      Atras
+    </ion-button>
+    </ion-card>
+</ion-content>
+
+<footer id="fContainer">
+  <div id="fBloque">
+    <ion-button [routerLink]="['/home']" shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="home"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id="fBloque">
+    <ion-button shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="bookmarks"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id="fBloque">
+    <ion-button [routerLink]="['/perfil']" shape="round" fill="solid" size="large" expand="block" slot="icon-only" color="light">
+      <ion-icon name="person"></ion-icon>
+    </ion-button>
+  </div>
+
+</footer>
+

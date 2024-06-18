@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-infante',
@@ -7,9 +9,48 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfantePage implements OnInit {
 
-  constructor() { }
+  infante: any;
+  idInfante: any;
+  
+  childName: string= "";
+  age: string= "";
+  rut: string= "";
+  diagnostico: string= "";
+  bloodType: string= "";
+  antecedentesMedicos: string= "";
+  alerigas: string = "";
+  prevision: string = "";
+
+  
+  constructor(
+    private dataService: DataService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.idInfante = this.route.snapshot.paramMap.get('infanteId');
+    console.log(this.idInfante);
+    this.dataInfante(); 
+  }
+
+  dataInfante() {
+    this.dataService.detalle_infante(this.idInfante).subscribe( 
+     data => {
+      this.childName = data.child_name;
+      this.age = data.age;
+      this.rut = data.rut;
+      this.antecedentesMedicos = data.antecedentes_medicos;
+      this.alerigas = data.alerigas;
+      this.prevision = data.prevision;
+      this.diagnostico = data.diagnostic;
+
+
+
+      console.log(data);
+    },
+    error => {
+      console.error('Error al obtener infantes', error);
+    });
   }
 
 }
