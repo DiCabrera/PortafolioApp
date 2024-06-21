@@ -62,16 +62,16 @@
       
       <div id="mContainer">
     
-        <ion-button href="tel:+56920060178" id="mBloque" shape="round" color="danger" fill="outline">
-          SAMU  131
+        <ion-button href="tel:{{numCentroMedico}}" id="mBloque" shape="round" color="danger" fill="outline">
+          Centro Medico
         </ion-button>
     
-        <ion-button id="mBloque" shape="round" color="danger" fill="outline">
-          Bomberos  132
+        <ion-button href="tel:{{numBomberos}}" id="mBloque" shape="round" color="danger" fill="outline">
+          Bomberos
         </ion-button>
 
-        <ion-button id="mBloque" shape="round" color="danger" fill="outline">
-          Carabineros  133
+        <ion-button href="tel:{{numCarabineros}}" id="mBloque" shape="round" color="danger" fill="outline">
+          Carabineros
         </ion-button>
         <ion-button (click)="location()" id="area" shape="round" color="danger" fill="outline">
           Compartir ubicación 

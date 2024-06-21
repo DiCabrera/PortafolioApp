@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
 
-  baseUrl = 'http://127.0.0.1:8000';
+  // baseUrl = 'http://127.0.0.1:8000';
+  baseUrl = 'https://portafolio-backend-zm60.onrender.com';
 
   getToken(): string | null {
     return localStorage.getItem('token');
@@ -18,16 +19,28 @@ export class DataService {
     private http: HttpClient
   ) { }
 
+  obtenerPropiedad(propiedadId: number): Observable<any> {
+    const token = this.getToken();
+
+    const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
+    return this.http.get(`${this.baseUrl}/main/obtener-propiedad/${propiedadId}/`, {headers})
+  }
 
 
+  obtenerServicios(propiedadId: number): Observable<any> {
+    const token = this.getToken();
+
+    const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
+    return this.http.get(`${this.baseUrl}/main/obtener-servicios/${propiedadId}/`, {headers})
+  }
 
   detalle_infante(infanteId: number): Observable<any> {
     const token = this.getToken();
 
     const headers = new HttpHeaders({ Authorization: `Bearer ${token}` });
     return this.http.get(`${this.baseUrl}/main/detalle-infante/${infanteId}/`, {headers})
-
   }
+
   listar_infantes(propiedadId: number): Observable<any> {
     const token = this.getToken();
 

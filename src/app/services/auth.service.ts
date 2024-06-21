@@ -7,7 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  baseUrl = 'http://127.0.0.1:8000';
+  // baseUrl = 'http://127.0.0.1:8000';
+  baseUrl = 'https://portafolio-backend-zm60.onrender.com';
 
   private token = localStorage.getItem('token');
 

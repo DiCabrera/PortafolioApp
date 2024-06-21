@@ -38,9 +38,9 @@ export class LoginPage implements OnInit {
 
   async login(){
 
-    console.log("Aaaaa")
-
-    const loader = await this.helperService.showLoader("Cargando")
+    console.log("Aaaaa");
+    // this.helperService.showAlert("hola",'hola');
+    const loader = await this.helperService.showLoader("Cargando");
     if (this.loginForm.valid){
       const { username, password } = this.loginForm.value;
       this.authServices.login(username, password).subscribe(
@@ -49,19 +49,16 @@ export class LoginPage implements OnInit {
           localStorage.setItem('token', data.access);
           console.log(data.access);
           this.router.navigate(['/elegir-propiedad']);
-          // this.mostrarSnackbar('Bienvenido');
-          // this.ngxService.stop();
          },
         error =>  {
           console.log(error)
-          // this.mostrarSnackbar("Credenciales no validas");
-          // this.ngxService.stop();
-          // window.location.reload();
+          this.helperService.showAlert('Usuario y/o contraseña no validos.', "Credenciales no validas");
         }
       )
       await loader.dismiss();
     } else {
-      this.helperService.showAlert("Por favor ingrese un correo","Ha ocurrido un error")
+      this.helperService.showAlert("Por favor llene todos los campos","Ha ocurrido un error")
+      await loader.dismiss();
     }
   }
 

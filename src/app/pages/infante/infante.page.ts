@@ -39,10 +39,11 @@ export class InfantePage implements OnInit {
       this.childName = data.child_name;
       this.age = data.age;
       this.rut = data.rut;
-      this.antecedentesMedicos = data.antecedentes_medicos;
-      this.alerigas = data.alerigas;
+      this.antecedentesMedicos = data.antecendetes_medicos;
+      this.alerigas = data.alergias;
       this.prevision = data.prevision;
       this.diagnostico = data.diagnostic;
+      this.bloodType = data.blood_type;
 
 
 

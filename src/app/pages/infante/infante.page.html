@@ -18,18 +18,13 @@
 <ion-content [fullscreen]="true">
   <ion-card id="inputCard">
 
-    <ion-input label="Nombre niño/a" labelPlacement="floating" value={{childName}} fill="outline" id="input"></ion-input>
-    <ion-input label="RUT" labelPlacement="floating" value={{rut}} fill="outline" id="input"></ion-input>
-    <ion-input label="Edad" labelPlacement="floating" value={{age}} fill="outline" id="input"></ion-input>
-    <!-- <ion-input label="Fono tutor" labelPlacement="floating" value="912341234" fill="outline" id="input"></ion-input> -->
-    <!-- <ion-input label="Dirección" labelPlacement="floating" value="Av. Primera Calle #3901" fill="outline" id="input"></ion-input>   -->
-    <!-- <ion-input label="Comuna" labelPlacement="floating" value="Providencia" fill="outline" id="input"></ion-input>   -->
-    <!-- <ion-input label="Ciudad" labelPlacement="floating" value="Santiago" fill="outline" id="input"></ion-input>   -->
-    <ion-input label="Previsión" labelPlacement="floating" value={{prevision}} fill="outline" id="input"></ion-input>  
-    <ion-input label="Tipo de sangre" labelPlacement="floating" value={{bloodType}} fill="outline" id="input"></ion-input>  
-    <!-- <ion-input label="Fono tutor" labelPlacement="floating" value="912341234" fill="outline" id="input"></ion-input>   -->
-    <ion-input label="Alergias" labelPlacement="floating" value={{alerigas}} fill="outline" id="input"></ion-input>  
-    <ion-input label="Otros antecedentes médicos" labelPlacement="floating" value={{antecedentesMedicos}} fill="outline" id="input"></ion-input>  
+    <ion-input label="Nombre niño/a" labelPlacement="floating" value={{childName}} fill="outline" id="input" readonly></ion-input>
+    <ion-input label="RUT" labelPlacement="floating" value={{rut}} fill="outline" id="input" readonly></ion-input>
+    <ion-input label="Edad" labelPlacement="floating" value={{age}} fill="outline" id="input" readonly></ion-input>
+    <ion-input label="Previsión" labelPlacement="floating" value={{prevision}} fill="outline" id="input" readonly></ion-input>  
+    <ion-input label="Tipo de sangre" labelPlacement="floating" value={{bloodType}} fill="outline" id="input" readonly></ion-input>  
+    <ion-input label="Alergias" labelPlacement="floating" value={{alerigas}} fill="outline" id="input" readonly></ion-input>  
+    <ion-input label="Otros antecedentes médicos" labelPlacement="floating" value={{antecedentesMedicos}} fill="outline" id="input" readonly></ion-input>  
 
     <ion-button color="rojo" id="btn">
       Guardar datos

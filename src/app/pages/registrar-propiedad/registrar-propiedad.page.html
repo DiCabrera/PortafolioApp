@@ -16,8 +16,8 @@
   <ion-row class="ion-justify-content-center" >
     <ion-card id="container">
       <ion-card-header>
-        <ion-card-title>Registro</ion-card-title>
-        <ion-card-subtitle>Registrar nueva propiedad</ion-card-subtitle>
+        <ion-card-title><h3>Registrar nueva propiedad</h3></ion-card-title>
+        <ion-card-subtitle></ion-card-subtitle>
         <br>
       </ion-card-header>
 
@@ -29,9 +29,20 @@
           <ion-input formControlName="address" label="Direccion" label-placement="floating" fill="outline"
             placeholder="Ingrese dirección" ></ion-input>
           <br>
-          <ion-input formControlName="contactNumber" label="Numero" label-placement="floating" fill="outline"
+          <ion-input formControlName="contactNumber" label="Numero de contacto" label-placement="floating" fill="outline"
             placeholder="Ingrese numero de contacto"></ion-input>
           <br>
+          <ion-card-title><h1>Numeros de emergencia</h1></ion-card-title>
+          <br>
+          <ion-input formControlName="centroMedico" label="Centro médico" label-placement="floating" fill="outline"
+            placeholder="Ingrese numero de contacto"></ion-input>
+          <br>
+          <ion-input formControlName="bomberos" label="Bomberos" label-placement="floating" fill="outline"
+            placeholder="Ingrese numero de contacto"></ion-input>
+            <br>
+          <ion-input formControlName="carabineros" label="Carabineros" label-placement="floating" fill="outline"
+            placeholder="Ingrese numero de contacto"></ion-input>
+              
           <hr>
         </form>
       </ion-card-content>

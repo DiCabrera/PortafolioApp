@@ -13,6 +13,9 @@ export class HomePage implements OnInit {
 
   propiedadId: any;
   username: string = '';
+  numCentroMedico: string = '';
+  numBomberos: string = ''
+  numCarabineros: string = ''
 
   constructor(
     private dataService: DataService,
@@ -20,11 +23,38 @@ export class HomePage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.datosUser()
+    this.datosUser();
     this.propiedadId = this.route.snapshot.paramMap.get('propiedadId');
-   
+    this.obtenerServicios();
+    console.log('num carabineros ',this.numCarabineros);
     console.log(this.propiedadId); 
+    this.obtenerPropiedad();
     
+  }
+
+
+  obtenerPropiedad() {
+    this.dataService.obtenerPropiedad(this.propiedadId).subscribe(
+      (data) => {
+        console.log('propiedad:', data);
+      }
+    )
+
+  }
+
+  obtenerServicios() {
+    this.dataService.obtenerServicios(this.propiedadId).subscribe(
+      (data) => {
+        this.numCentroMedico = data[0].numero_asistencia_medica;
+        this.numBomberos = data[0].numero_bomberos;
+        this.numCarabineros = data[0].numero_carabineros;
+        console.log(data);
+        console.log('num carabineros ',this.numCarabineros);
+        console.log('num carabineros ',this.numBomberos);
+        console.log('num carabineros ',this.numCentroMedico);
+
+      }
+    )
   }
 
 

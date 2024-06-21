@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
+import { HelperService } from 'src/app/services/helper.service';
 
 @Component({
   selector: 'app-registrar-infante',
@@ -19,7 +20,8 @@ export class RegistrarInfantePage implements OnInit {
     private fb: FormBuilder,
     private dataService: DataService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private helperService: HelperService,
 
   ) { 
 
@@ -43,8 +45,8 @@ export class RegistrarInfantePage implements OnInit {
     console.log(this.propiedadId)
   }
 
-  register() {
-   
+  async register() {
+    const loader = await this.helperService.showLoader("Cargando");
     if (this.formInfante.valid) {
         const { childName, age, rut, diagnostic, bloodType, prevision, alergias, antecendetesMedicos   } = this.formInfante.value;
         const formData = new FormData();
@@ -62,9 +64,13 @@ export class RegistrarInfantePage implements OnInit {
             console.log(formData)
           }
         )
+        this.helperService.showAlert("Ha registrado al infante con éxito.","Felicidades")
         this.router.navigate(['/home', this.propiedadId]);
+        await loader.dismiss();
 
     } else {
+      this.helperService.showAlert("Por favor llene todos los campos","Ha ocurrido un error")
+      await loader.dismiss();
       console.log('Formulario no valido');
     }
 
